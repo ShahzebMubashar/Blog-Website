@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <title>iBlog - Heaven for bloggers</title>
+    <style>
+        /* Comment Section */
+        .comments-section {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .comments-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .comment-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .comment-form textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: none;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .comment-form button {
+            align-self: flex-end;
+            padding: 0.5rem 1rem;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .comment-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .comments-list {
+            margin-top: 2rem;
+        }
+
+        .comment {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .comment p {
+            margin: 0;
+            color: #333;
+        }
+
+        .comment strong {
+            color: #007BFF;
+        }
+
+        .comment span {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.875rem;
+            color: #777;
+        }
+
+        @media (max-width: 768px) {
+            .comment-form button {
+                align-self: center;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navigation max-width-1 m-auto">
+        <div class="nav-left">
+            <a href="/">
+                <span><img src="img/logo.png" width="94px" alt=""></span>
+            </a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <form action="/search.html" method="get">
+                <input class="form-input" type="text" name="query" placeholder="Article Search">
+                <button class="btn">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="max-width-1 m-auto">
+        <hr>
+    </div>
+    <div class="m-auto content max-width-1 my-2">
+        <div class="content-left">
+            <h1>The heaven for bloggers</h1>
+            <p>Step into iBlog, where the art of blogging meets the passion for sharing ideas. Whether you're a seasoned
+                writer, a curious newbie, or somewhere in between, iBlog is your ultimate destination. </p>
+            <p>Here, you'll find a vibrant community of bloggers who are as enthusiastic about storytelling as you are.
+                Our platform is designed to inspire, educate, and connect you with like-minded individuals. Dive into a
+                treasure trove of tips, tricks, and insights that will elevate your blogging journey to new heights.
+                Join us at iBlog, and let’s create, connect, and thrive together in this paradise of words and
+                creativity.Discover comprehensive guides, exclusive interviews with industry experts, and a plethora of
+                resources tailored to help you succeed. At iBlog, every story matters, and we can’t wait to see what
+                you’ll share next.
+
+            </p>
+        </div>
+        <div class="content-right">
+            <img src="https://images.unsplash.com/photo-1522199710521-72d69614c702?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGJsb2dnaW5nfGVufDB8fHx8MTY0MjY2NjIxMg&ixlib=rb-1.2.1&q=80&w=1080"
+                alt="iBlog">
+        </div>
+    </div>
+    <div class="max-width-1 m-auto">
+        <hr>
+    </div>
+    <div class="home-articles max-width-1 m-auto font2">
+        <h2>Featured Articles</h2>
+
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="img/fabio-oyXis2kALVg-unsplash.jpg" alt="Data Science">
+            </div>
+            <div class="home-article-content font1">
+                <a href="blogpost.html " class="article-link">
+                    <h3>Understanding Data Science</h3>
+                    <div class="year">2024</div>
+                </a>
+
+                <div>By Jane Doe</div>
+                <span>01 June | 8 min read</span>
+
+            </div>
+        </div>
+
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="img/arvin-mantilla-YCIqvvIn55M-unsplash.jpg" alt="Machine Learning">
+            </div>
+            <div class="home-article-content font1">
+                <a href="blogpost1.html " class="article-link">
+                    <h3>Introduction to Machine Learning</h3>
+                    <div class="year">2024</div>
+                </a>
+                <div>By John Smith</div>
+                <span>23 January | 6 min read</span>
+            </div>
+        </div>
+
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="img/nasa-Q1p7bh3SHj8-unsplash.jpg" alt="Technology">
+            </div>
+            <div class="home-article-content font1">
+                <a href="blogpost2.html " class="article-link">
+                    <h3>The Future of Technology</h3>
+                    <div class="year">2024</div>
+                </a>
+                <div>By Alice Johnson</div>
+                <span>27 March | 5 min read</span>
+            </div>
+        </div>
+
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="img/dan-cristian-padure-h3kuhYUCE9A-unsplash.jpg" alt="Science">
+            </div>
+            <div class="home-article-content font1">
+                <a href="blogpost3.html " class="article-link">
+                    <h3>Exploring Quantum Physics</h3>
+                    <div class="year">2024</div>
+                </a>
+                <div>By Bob Brown</div>
+                <span>07 May | 8 min read</span>
+            </div>
+        </div>
+
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="img/lukasz-szmigiel-jFCViYFYcus-unsplash.jpg" alt="Nature">
+            </div>
+            <div class="home-article-content font1">
+                <a href="blogpost4.html " class="article-link">
+                    <h3>The Beauty of Nature</h3>
+                    <div class="year">2024</div>
+                </a>
+                <div>By Clara White</div>
+                <span>11 April | 4 min read</span>
+            </div>
+        </div>
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="img/alex-chumak-zGuBURGGmdY-unsplash.jpg" alt="Coding">
+            </div>
+            <div class="home-article-content font1">
+                <a href="blogpost5.html " class="article-link">
+                    <h3>Getting Started with Python</h3>
+                    <div class="year">2024</div>
+                </a>
+                <div>By David Green</div>
+                <span>14 February | 7 min read</span>
+            </div>
+        </div>
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="img/daria-nepriakhina-xY55bL5mZAM-unsplash.jpg" alt="Bussiness">
+            </div>
+            <div class="home-article-content font1">
+                <a href="blogpost6.html " class="article-link">
+                    <h3>Entrepreneurship 101</h3>
+                    <div class="year">2024</div>
+                </a>
+                <div>By Emma Brown</div>
+                <span>30 April | 5 min read</span>
+            </div>
+        </div>
+        <div class="home-article">
+            <div class="home-article-img">
+                <img src="img/brooke-lark-nTZOILVZuOg-unsplash.jpg" alt="Health">
+            </div>
+            <div class="home-article-content font1">
+                <a href="blogpost7.html " class="article-link">
+                    <h3>Healthy Living Tips</h3>
+                    <div class="year">2024</div>
+                </a>
+                <div>By Olivia Black</div>
+                <span>07 January | 3 min read</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comment Section -->
+    <div class="max-width-1 m-auto">
+        <hr>
+    </div>
+    <div class="comments-section max-width-1 m-auto">
+        <h2>Comments</h2>
+        <form class="comment-form">
+            <textarea name="comment" class="form-input" rows="5" placeholder="Leave a comment..."></textarea>
+            <button class="btn" type="submit">Submit</button>
+        </form>
+        <div class="comments-list">
+            <div class="comment">
+                <p><strong>Olivia Garis:</strong> This is a great article! Really enjoyed it.</p>
+                <span>07 January</span>
+            </div>
+            <div class="comment">
+                <p><strong>Anwayee Bera:</strong> Very informative. Thanks for sharing!</p>
+                <span>08 April</span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Copyright &copy; iBlog.com </p>
+        <a href="https://www.vecteezy.com/free-vector/typewriter">Vector Credits: Vecteezy</a>
+    </div>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const commentForm = document.querySelector('.comment-form');
+            const commentsList = document.querySelector('.comments-list');
+
+            commentForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const commentTextarea = commentForm.querySelector('textarea');
+                const commentText = commentTextarea.value.trim();
+
+                if (commentText !== '') {
+
+                    const comment = document.createElement('div');
+                    comment.classList.add('comment');
+                    const strong = document.createElement('strong');
+                    strong.textContent = 'User:';
+                    const commentContent = document.createElement('p');
+                    commentContent.innerHTML = `<strong>You:</strong> ${commentText}`;
+                    const commentDate = document.createElement('span');
+                    commentDate.textContent = new Date().toLocaleDateString();
+                    comment.appendChild(commentContent);
+                    comment.appendChild(commentDate);
+
+
+                    commentsList.appendChild(comment);
+
+
+                    commentTextarea.value = '';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
